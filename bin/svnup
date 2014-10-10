@@ -1,0 +1,3 @@
+#!/bin/sh
+cd ~/chexun;svn up;chmod 777 -R ~/chexun/var/logs/uc;
+cd ~/static;svn up;
