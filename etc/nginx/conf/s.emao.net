@@ -1,0 +1,23 @@
+server
+{
+    listen 80;
+    server_name s.emao.net ;
+    index index.html index.php;
+    root  /home/work/static;
+    #error_page   404   /404.html;                                                                                                                    
+    location ~ [^/]\.php(/|$)
+    {
+
+        fastcgi_pass unix:/tmp/php-cgi.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+        break;
+    }
+    
+    location / {
+        if (!-e $request_filename){
+            rewrite /(.*)\.(css|js)$ /js_css.php?f=$1&t=$2 last;
+            }
+        }
+}

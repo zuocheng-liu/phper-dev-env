@@ -1,0 +1,26 @@
+#
+### ~/.screenrc
+##
+### 启动时不显示欢迎屏幕
+startup_message off
+
+autodetach on
+
+##  定义screen的功能键为Ctrl-Z。向终端输入Ctrl-Z时应按 Ctrl-Z z。
+escape ^Zz
+## 屏幕缓冲区 1024 行。
+defscrollback 1024
+## 在最下一行显示窗口列表和时钟
+
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rY}%n %t%{-}%+w %=%{..G} %H(%l) %{..Y} %Y/%m/%d %c:%s "
+
+## 关闭错误提示
+vbell off
+## 按 Ctrl-Z w 或 Ctrl-Z Ctrl-W 显示窗口列表
+bind w windowlist -b
+bind ^w windowlist -b
+
+defencoding utf-8
+encoding utf-8 utf-8
