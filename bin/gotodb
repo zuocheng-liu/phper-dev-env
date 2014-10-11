@@ -1,0 +1,17 @@
+#!/bin/sh
+MYSQLNAME=$1
+case $MYSQLNAME in 
+    36)
+        mysql -u web -P 3306 -h192.168.0.36 -pyimaoqiche
+    ;;
+    42)
+        mysql -u web -P 3306 -h192.168.0.42 -pyimaoqiche
+    ;;
+    *)
+        echo "Sorry, please input an avalible mysql server name."
+    ;;
+    
+esac
+
+
+

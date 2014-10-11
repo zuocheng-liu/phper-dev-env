@@ -1,0 +1,36 @@
+#!/usr/bin/expect -f
+set server [lindex $argv 0]
+set user zuocheng
+set password zuocheng 
+
+switch -exact -- $server {
+
+    dev {
+        set user root
+        set host 192.168.0.42
+        set password root
+    }
+    qa {
+        set user root
+        set host 192.168.0.42
+        set password 123qwe
+    }
+ 
+    default {
+        puts "Please input an avalible server.\r"
+        exit
+    }
+
+}
+
+set timeout 3
+spawn ssh $user@$host
+expect "?assword:*"
+send "$password\r"
+#expect "\no)? "
+#send "yes\r"
+#expect "\$ "
+#send "sudo -iu rd\r"
+#expect "\$ "
+#send "cd /home/work\r"
+interact
