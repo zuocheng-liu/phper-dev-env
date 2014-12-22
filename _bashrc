@@ -12,7 +12,7 @@ export LANG=zh_CN.UTF-8
 PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;31m\]@\[\033[01;36m\]\H\[\033[01;31m\]:\[\e[33m\]\w\[\e[0m\]\n\$ "
 export PS1
 
-PAT=H/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/usr/share/baidu/bin:$PATH
+#PAT=H/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/usr/share/baidu/bin:$PATH
 
 PATH=$HOME/bin:$PATH
 PATH=$HOME/usr/bin:$PATH
