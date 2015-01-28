@@ -1,0 +1,4 @@
+#!/bin/sh
+git archive --format=zip --output=$1 HEAD
+
+
