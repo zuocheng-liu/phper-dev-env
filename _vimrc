@@ -10,6 +10,8 @@ set list listchars=tab:>-
 "autocmd FileType * set tabstop=4|set shiftwidth=4|set noexpandtab
 "autocmd FileType python,c,cpp,php set tabstop=4|set shiftwidth=4|set expandtab
 "-----------------settings for using easily--------------"
+"Set color column line
+set cc=81
 " Sets how many lines of history VIM har to remember
 set history=400
 " Set to auto read when a file is changed from the outside
