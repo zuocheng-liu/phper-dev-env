@@ -35,16 +35,19 @@ PATH=$LOCAL/mysql/bin:$PATH
 export PATH
 
 LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-LD_LIBRARY_PATH=$HOME/usr/lib/mysql/:$LD_LIBRARY_PATH
 LD_LIBRARY_PATH=$LOCAL/libmcrypt/lib:$LD_LIBRARY_PATH
 LD_LIBRARY_PATH=$LOCAL/mhash/lib:$LD_LIBRARY_PATH
 LD_LIBRARY_PATH=$LOCAL/mysql/lib/mysql:$LD_LIBRARY_PATH
 LD_LIBRARY_PATH=$LOCAL/samba/lib:$LD_LIBRARY_PATH
 LD_LIBRARY_PATH=$LOCAL/lib:$LD_LIBRARY_PATH
+
+LD_LIBRARY_PATH=$LOCAL/slim/lib:$LD_LIBRARY_PATH
 export LD_LIBRARY_PATH
 
 INCLUDE_PATH=$LOCAL/libmcrypt/include:$INCLUDE_PATH
 INCLUDE_PATH=$LOCAL/mhash/include:$INCLUDE_PATH
+
+INCLUDE_PATH=$LOCAL/slim/include:$INCLUDE_PATH
 export INCLUDE_PATH
 
 MYSQL_DATA=$HOME/var/mysql/data/
@@ -55,3 +58,5 @@ export MYSQL_DATA
 export MYSQL_LOGS
 export MYSQL_SOCK
 export MYSQL_CONF
+
+alias svndiff='svn di --diff-cmd=$HOME/bin/diffwrap.sh'
