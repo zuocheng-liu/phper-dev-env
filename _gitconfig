@@ -1,0 +1,15 @@
+[push]
+	default = simple
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	d = difftool
+[user]
+	name = Zuocheng Liu
+	email = zuocheng.liu@gmail.com
+[core]
+	editor = vim

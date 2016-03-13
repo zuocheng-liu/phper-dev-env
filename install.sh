@@ -1,9 +1,10 @@
 #/usr/bin/bash
 SRC=`pwd`
 cd $HOME 
-ln -s ${SRC}/_vim .vim
-ln -s ${SRC}/_vimrc .vimrc
-ln -s ${SRC}/_screenrc .screenrc
-ln -s ${SRC}/_ctags .ctags
-ln -s ${SRC}/bin bin
-ln -s ${SRC}/_bashrc .bashrc_addition
+ln -sf ${SRC}/_vim      ${HOME}/.vim
+ln -sf ${SRC}/_vimrc    ${HOME}/.vimrc
+ln -sf ${SRC}/_screenrc ${HOME}/.screenrc
+ln -sf ${SRC}/_ctags    ${HOME}/.ctags
+ln -sf ${SRC}/_gitconfig ${HOME}/.gitconfig
+ln -sf ${SRC}/bin       ${HOME}/bin
+ln -sf ${SRC}/_bashrc   ${HOME}/.bashrc_addition
