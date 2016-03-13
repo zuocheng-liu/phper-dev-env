@@ -8,3 +8,5 @@ ln -sf ${SRC}/_ctags    ${HOME}/.ctags
 ln -sf ${SRC}/_gitconfig ${HOME}/.gitconfig
 ln -sf ${SRC}/bin       ${HOME}/bin
 ln -sf ${SRC}/_bashrc   ${HOME}/.bashrc_addition
+
+echo "Done!\r\n";
