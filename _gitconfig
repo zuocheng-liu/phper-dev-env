@@ -9,8 +9,8 @@
 [alias]
 	d = difftool
 [user]
-	name = liuzuocheng
-	email = liuzuocheng@360.cn
+	name = Zuocheng Liu
+	email = zuocheng.liu@gmail.com
 [core]
 	editor = vim
-    excludesfile = /home/liuzuocheng/.gitignore
+    excludesfile = /home/i/.gitignore
