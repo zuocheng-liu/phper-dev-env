@@ -11,7 +11,7 @@ set list listchars=tab:>-
 "autocmd FileType python,c,cpp,php set tabstop=4|set shiftwidth=4|set expandtab
 "-----------------settings for using easily--------------"
 "Set color column line
-set cc=81
+"set cc=81
 " Sets how many lines of history VIM har to remember
 set history=400
 " Set to auto read when a file is changed from the outside
@@ -70,7 +70,7 @@ map <silent> <F2> :NERDTreeToggle<cr>
 map <silent> <F4> :WMToggle<cr>
 "----------------setting for ctags-----------------------"
 set autochdir
-set tags=tags;
+set tags=tags,../tags,../../tags,../../../tags,../../../../tags;
 
 "----------------setting for taglist---------------------"
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
