@@ -1,0 +1,17 @@
+# ctags code index file
+
+tags
+
+# C/C++
+
+*~
+*.o
+*.os
+*.a
+*.so
+*.out
+*.swp
+
+# PHP
+
+
