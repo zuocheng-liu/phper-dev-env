@@ -49,6 +49,17 @@ map <S-Tab> :bp<CR>
 "-------------------settings for backspace button--------"
 set backspace=indent,eol,start
 set nocompatible
+
+"settting for status line"
+set laststatus=2
+highlight StatusLine cterm=bold ctermfg=yellow ctermbg=blue
+
+function! CurDir()
+    return  substitute(getcwd(), $HOME, "~", "g")
+endfunction
+
+set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\@\%{hostname()}
+
 "----------Hight Light Current Line----------------------"
 "set cursorline
 "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
