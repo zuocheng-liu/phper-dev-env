@@ -58,7 +58,7 @@ function! CurDir()
     return  substitute(getcwd(), $HOME, "~", "g")
 endfunction
 
-set statusline=[%n]\ %f%m%r%h\ \|\ \ pwd:\ %{CurDir()}\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\@\%{hostname()}
+set statusline=[%n]\ file:\ %{CurDir()}\\\%f%m%r%h\ \ \|%=\|\ %l,%c\ %p%%\ \|\ ascii=%b,hex=%b%{((&fenc==\"\")?\"\":\"\ \|\ \".&fenc)}\ \|\ %{$USER}\@\%{hostname()}
 
 "----------Hight Light Current Line----------------------"
 "set cursorline
