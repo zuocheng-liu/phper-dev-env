@@ -18,7 +18,6 @@ switch -exact -- $server {
     america {
         set user root
         set host 47.88.0.201
-        set password Xiushen7jiA
     }
  
     default {
