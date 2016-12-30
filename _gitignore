@@ -1,11 +1,11 @@
+# common
+*~
 # ctags code index file
-
 tags
 
 # C/C++
-
-*~
 *.o
+*.d
 *.os
 *.a
 *.so
@@ -13,5 +13,3 @@ tags
 *.swp
 
 # PHP
-
-
