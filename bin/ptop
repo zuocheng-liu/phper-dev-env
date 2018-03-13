@@ -1,0 +1,5 @@
+#! /bin/bash
+
+PL=`pidof nginx`
+PL=${PL// /,}
+top -p $PL
