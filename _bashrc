@@ -49,4 +49,6 @@ if [ -d ${LOCAL_PATH} ]; then
     done  
 fi
 
-alias svndiff='svn di --diff-cmd=$HOME/bin/diffwrap.sh'
+if [ -f $HOME/bin/diffwrap.sh ]; then
+    alias svndiff='svn di --diff-cmd=$HOME/bin/diffwrap.sh'
+fi
