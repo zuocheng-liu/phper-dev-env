@@ -1,20 +1,20 @@
 #!/usr/bin/expect -f
 set server [lindex $argv 0]
-set user zuocheng
-set password zuocheng 
+set user liuzuocheng
+set password 86thunderdreaM!
+
+set timeout 1
 
 switch -exact -- $server {
-
-    dev {
-        set user root
-        set host 192.168.0.42
-        set password root
+    www {
+        spawn ssh zuocheng.net
+        interact
     }
-    qa {
-        set user root
-        set host 192.168.0.42
-        set password 123qwe
+    it {
+        set user i
+        set host zuocheng.net
     }
+ 
     america {
         set user root
         set host 47.88.0.201
@@ -27,7 +27,6 @@ switch -exact -- $server {
 
 }
 
-set timeout 3
 spawn ssh $user@$host
 expect "?assword:*"
 send "$password\r"
@@ -38,3 +37,8 @@ send "$password\r"
 #expect "\$ "
 #send "cd /home/work\r"
 interact
+
+proc usage {} {
+    puts stderr "usage: $::argv0 username password ipaddress"
+        exit 1
+}
