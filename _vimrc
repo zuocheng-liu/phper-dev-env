@@ -2,8 +2,8 @@ set shell=/bin/bash
 syntax enable
 syntax on
 "------------------- TAB settings -----------------------"
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set smarttab
 set expandtab
 set list listchars=tab:>-
