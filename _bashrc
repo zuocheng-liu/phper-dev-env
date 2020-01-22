@@ -16,7 +16,7 @@ export PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u\[\033[01;31m\]@\
 
 #PAT=H/usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/usr/share/baidu/bin:$PATH
 
-
+### for user app
 function export_app_path() {
     APP_PATH=$1
     if [ ! -d ${APP_PATH} ]; then
@@ -40,15 +40,19 @@ function export_app_path() {
     fi
 } 
 
+function export_usr_apps() {
+  USER_APPS_DIR=$1
+  if [ -d ${USER_APPS_DIR} ]; then
+      for app_path in ${USER_APPS_DIR}/*
+      do
+          export_app_path ${app_path}
+      done  
+  fi
 
-LOCAL_PATH=${HOME}/local
-if [ -d ${LOCAL_PATH} ]; then
-    for app_path in ${LOCAL_PATH}/*
-    do
-        export_app_path ${app_path}
-    done  
-fi
+}
+export_usr_apps ${HOME}/local
 
-if [ -f $HOME/bin/diffwrap.sh ]; then
-    alias svndiff='svn di --diff-cmd=$HOME/bin/diffwrap.sh'
-fi
+#### for svn
+#if [ -f $HOME/bin/diffwrap.sh ]; then
+#    alias svndiff='svn di --diff-cmd=$HOME/bin/diffwrap.sh'
+#fi
