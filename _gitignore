@@ -7,8 +7,8 @@ tags
 *.o
 *.d
 *.os
-*.a
-*.so
+#*.a
+#*.so
 *.out
 *.swp
 
