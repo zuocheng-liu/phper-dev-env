@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
 set server [lindex $argv 0]
 set user liuzuocheng
-set password 86thunderdreaM!
+set password xxxxxxx!
 
 set timeout 1
 
